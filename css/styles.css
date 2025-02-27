@@ -1,0 +1,185 @@
+body {
+    margin: 0;
+    background-color:  #7d5a5a;
+    height: 80vh;
+    display: flex;
+    flex-direction: column; 
+}
+
+/* Barra de Navegación */
+.barra_menu {
+    width: 100%;
+    background: #031580;
+    font-family: 'Roboto';
+    font-weight: 700;
+    position: fixed;
+    top: 0; 
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+#menu-toggle {display: none;}
+.barra_menu label {
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-right: 1px solid #fff;
+    cursor: pointer;
+}
+#barra_nav ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+#barra_nav li {
+    border-right: 1px solid #fff;
+    text-align: center;
+    flex-grow: 1;
+}
+#barra_nav li a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+#barra_nav li a:hover {
+    background: rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease;
+}
+
+/*Calculadora*/
+#calculadora{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.content{
+    padding: 20px;
+    text-align: left;
+    width: 100%;
+    max-width: 350px;
+    background-color: #862f2f;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+}
+
+.titulocalc{
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #fff;
+    font-family: 'Moderustic';
+    font-weight: bolder;
+}
+
+.valores {
+    font-family: 'Moderustic';
+    font-weight: lighter;
+    margin: 10px 0 5px;
+    color: #e4dede;
+}
+
+.numeros {
+    width: 100%;
+    font-family: 'Moderustic';
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    color: black;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input[type="number"] {
+    appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.botones {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-family: 'Moderustic';
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #2f865b;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+#iva, #fodinfa, #total, #envcost, #enviocost{
+    cursor: not-allowed;
+    background-color: #e9ecef;
+}
+
+.botones:hover {
+    background-color: #2f862f;
+}
+
+@media (max-width: 768px) {
+/* Calculadora responsive */
+    #calculadora{margin-top: 80px;}
+    .content {
+        max-width: 90%;
+    }
+
+    .titulocalc {font-size: 20px;}
+    .numeros {font-size: 14px;}
+
+    .botones {
+        font-size: 14px;
+        padding: 8px;
+    }
+    
+/* Barra de Navegación responsive */
+    .barra_menu label {display: block;}
+    #barra_nav {
+        position: fixed;
+        width: 70%;
+        background: #031580;
+        top: 50px;
+        left: -70%; 
+        transition: all 0.2s ease;
+    }
+    #barra_nav ul {flex-direction: column;}
+    #barra_nav li {
+        border-top: 1px solid #fff;
+        text-align: left;
+    }
+    #menu-toggle:checked ~ #barra_nav {left: 0;}
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 95%;
+        padding: 15px;
+    }
+
+    .titulocalc {font-size: 18px;}
+    .numeros {font-size: 12px;}
+
+    .botones {
+        font-size: 12px;
+        padding: 6px;
+    }
+}

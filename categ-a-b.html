@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/fonts.css">
+    <title>Categorias A y B</title>
+</head>
+<body>
+
+<header class="barra_menu">
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle"><img src="img/menu.png"></label>
+    <nav id="barra_nav">
+        <ul>
+            <li><a href="categ-a-b.html">Categorias A y B</a></li>
+            <li><a href="categ-c-en-adelant.html">Categorias C en adelante</a></li>
+        </ul>
+    </nav>
+</header>
+
+<article id="calculadora">
+    <div class="content">
+        <p class="titulocalc">Calculadora Cotizacion</p>
+        <label class="valores">Valor</label>
+        <input type="number" class="numeros" id="valorbase" placeholder="Ingresa aquí tu valor.."><br>
+        <label class="valores">Peso</label>
+        <input type="number" class="numeros" id="peso" placeholder="Ingresa el peso en libras..">
+        <label class="valores">Costo de envío</label><br>
+        <input type="number" class="numeros" id="envcost" disabled><br>
+        <label class="valores">TOTAL</label><br>
+        <input type="number" class="numeros" id="total" disabled><br>
+        <button type="button" class ="botones" onclick="calcular()">CALCULAR</button>
+        <button type="button" class ="botones" onclick="limpiar()">LIMPIAR</button>
+    </div>
+</article>
+
+<script src="js/main1.js"></script>
+
+<footer></footer>
+</body>
+</html>
